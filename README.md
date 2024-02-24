@@ -25,9 +25,13 @@ python3 -m flask run
 pip install flask-login
 ```
 
-### About it and how to use
+### Development
 This website was developed with Flask. HTML, CSS, and JavaScript were the building blocks of your website. SQLite3 used as database to store the exercises downloaded using RapidAPI and user data (login and exercises favorited).
 
+![Front Page #04](https://github.com/uch1no/CS50-Final-Project/blob/main/static/readme_04.png?raw=true "Language Tech Stack")
+
+
+### How to use
 Using it is very straightforward: register and start searching for exercises.
 
 Use the "Advanced Search" to filter by body parts or equipments.
