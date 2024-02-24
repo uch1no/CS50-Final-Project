@@ -195,14 +195,6 @@ def exercise(exerciseId):
     except Exception:
         return render_template('error.html', notfound='Exercise'), 400
 
-
-##### PROFILE
-# @app.route("/profile")
-# @login_required
-# def profile():
-#     return render_template("profile.html")
-
-
 ##### PROFILE
 @app.route("/favorites")
 @login_required
@@ -283,7 +275,7 @@ def login():
         message = f"Hi, " + session["username"].capitalize() + "!"
         flash(message)
         print("Login successful")
-        return render_template("profile.html")
+        return redirect("/")
 
 
 ##### LOGOUT
