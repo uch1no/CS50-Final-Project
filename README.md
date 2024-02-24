@@ -35,4 +35,4 @@ Use the "Advanced Search" to filter by body parts or equipments.
 Data provided by <a href="https://www.exercisedb.io/" target="_blank">Exercisedb
 
 
-### This was CS50.
+# This was CS50.
