@@ -1,34 +1,38 @@
-# CS50 Final Project
+# CS50 Final Project by Rodrigo Utino
 ## Exercise Yourself Website
 ![Front Page #01](https://github.com/uch1no/CS50-Final-Project/blob/main/static/readme_01.png?raw=true "Front Page #01")
 ![Front Page #02](https://github.com/uch1no/CS50-Final-Project/blob/main/static/readme_02.png?raw=true "Front Page #02")
 
 
-### Install and update using pip:
+### Install and update your env:
+####Use pip to install flask:
 ```
 $ pip install -U Flask
 ```
 
-### Create virtual environment:
+#### Create a virtual environment:
 ```
 python -m venv env
 ```
 
-### Running:
+#### Running:
 ```
 python3 -m flask run
 ```
 
-
-### Some modules need to be downloaded:
+#### Some modules need to be downloaded:
 ```
 pip install flask-login
 ```
 
-### Navigating and using
-This website is very straightforward: register and start searching for exercises.
+### About it and how to use
+This website was developed with Flask. HTML, CSS, and JavaScript were the building blocks of your website. SQLite3 used as database to store the exercises downloaded using RapidAPI and user data (login and exercises favorited).
+
+Using it is very straightforward: register and start searching for exercises.
 
 Use the "Advanced Search" to filter by body parts or equipments.
+
+Favorite your exercises to remember then.
 
 ![Front Page #03](https://github.com/uch1no/CS50-Final-Project/blob/main/static/readme_03.png?raw=true "Front Page #03")
 
