@@ -43,12 +43,16 @@
                         <form class="form-inline" action="{{ url_for('search') }}" method="POST">
                             <ul class="navbar-nav me-auto mt-2">
                                 <li class="nav-item">
-                                    <input id="exercises-list-input-layout" list="exercises-list-layout" class="form-control mr-sm-2" autocomplete="on" placeholder="Search Exercises" name="search" type="search">
+                                    <input name="searchInput" id="exercises-list-input-layout" list="exercises-list-layout" class="form-control mr-sm-2" autocomplete="on" placeholder="Search Exercises" name="search" type="search">
                                     <datalist id="exercises-list-layout">
                                     </datalist>
                                 </li>
-                                <select name="searchBodypart" id="searchBodypart" class="form-control form-control-inline" hidden="hidden"></select>
-                                <select name="searchEquipment" id="searchEquipment" class="form-control form-control-inline" hidden="hidden"></select>
+                                <select name="searchBodypart" id="searchBodypart" class="form-control form-control-inline" hidden="hidden">
+                                    <option value="" focused>Body Part</option>
+                                </select>
+                                <select name="searchEquipment" id="searchEquipment" class="form-control form-control-inline" hidden="hidden">
+                                    <option value="" focused>Equipment</option>
+                                </select>
                                 <li class="nav-item">
                                     <button class="btn btn-sm btn-outline-secondary" type="submit" action="/search" style="height:100%;">Search</button>
                                 </li>
