@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search Page
+{% endblock %}
+
+{% block main %}
+
+<div class="container marketing">
+<div class="row g-0 row-cols-2 justify-content-center" id="show-results">
+{% if exercises|length != 0 %}
+  {% for exercise in exercises %}
+    <div class="row featurette exercise-container-big">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">{{ exercise['name'] }}
+          <label class="add-fav">
+            <form id="favorite">
+              <input type="checkbox" {% if exercise['id'] in favoritesId %} checked {% endif %}
+              id="exercise"
+              data-exercise-id="{{ exercise['id'] }}"
+              placeholder="{{ exercise['id'] }}"
+              onchange="doalert(this)"/>
+              <i class="icon-heart"><i {% if exercise['id'] not in favoritesId %} class="icon-plus-sign" {% endif %}></i></i>
+            </form>
+          </label>
+        </h2>
+        <p class="lead exercise-block">{{ exercise['instructions'] }}</p>
+        <div class="row row-cols-2">
+          <p class="lead exercise-block" style="margin-bottom: 0;">Body Part</p>
+          <p class="lead exercise-block" style="margin-bottom: 0;">Muscle Target</p>
+          <p class="lead exercise-block">{{ exercise['bodyPart'] }}</p>
+          <p class="lead exercise-block">{{ exercise['muscle'] }}</p>
+        </div>
+        <div class="row row-cols-2">
+          <p class="lead exercise-block" style="margin-bottom: 0;">Secondary Muscles</p>
+          <p class="lead exercise-block" style="margin-bottom: 0;">Equipment</p>
+          <p class="lead exercise-block">{{ exercise['secondaryMuscles'] }}</p>
+          <p class="lead exercise-block">{{ exercise['equipment'] }}</p>
+        </div>
+      </div>
+      <div class="col-md-5 exercise-container centered">
+        <img class="bd-placeholder-img rounded-circle" width="280" height="auto" src={{ exercise['gifpath'] }} role="gif" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="auto" fill="var(--bs-secondary-color)"/></svg>
+      </div>
+    </div>
+  {% endfor %}
+  {% else %}
+    <div id="content" class="d-flex flex__center snippet-hidden">
+      <div class="d-flex gs32 md:fd-column md:ai-center ai-start">
+          <div class="flex--item">
+            <svg aria-hidden="true" class="fc-black-300 svg-spot spotSearchLg" width="96" height="96" viewBox="0 0 96 96"><path d="M60.38 76.15a6.2 6.2 0 1 1 8.77-8.77l17.78 17.79a6.2 6.2 0 0 1-8.76 8.76L60.38 76.15Z" opacity=".2"></path><path d="M52.17 13.27a1.5 1.5 0 0 0-1.5 2.6A25.5 25.5 0 0 1 63 32.97a1.5 1.5 0 1 0 2.94-.59 28.5 28.5 0 0 0-13.77-19.1ZM36.64 11c0-.84.67-1.5 1.5-1.5 1.8 0 3.59.19 5.35.53a1.5 1.5 0 1 1-.58 2.95 25.5 25.5 0 0 0-4.78-.48 1.5 1.5 0 0 1-1.5-1.5ZM38 1.5a36.5 36.5 0 1 0 22.3 65.4 6.47 6.47 0 0 0 1.9 4.48l19.15 19.15a6.5 6.5 0 0 0 9.18-9.18L71.38 62.2a6.47 6.47 0 0 0-4.48-1.9A36.5 36.5 0 0 0 38 1.5ZM4.5 38a33.5 33.5 0 1 1 67 0 33.5 33.5 0 0 1-67 0Zm59.83 31.26a3.5 3.5 0 0 1 4.93-4.93l19.15 19.14a3.5 3.5 0 1 1-4.94 4.94L64.33 69.26Z"></path></svg>
+          </div>
+          <div class="flex--item wmx5">
+              <h1 class="fs-headline1 mb4">Oops...</h1>
+              <div class="fs-subheading mb24">
+                      <p>We couldn't find any exercise for "{{ search }}", sorry!</p>
+              </div>
+              <div class="fs-body2">
+                  <p>Try <a href="#">different or less specific keywords</a></p>
+                  <p>Browse our <a href="#">popular tags</a></p>
+                  <p class="mb0">If you feel something is missing that should be here, <a href="/contact">contact me</a>.</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  {% endif %}
+</div>
+</div>
+
+
+<!--<hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1">Similar exercises</span></h2>
+        <p class="lead">Return other exercises</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+      </div>
+    </div>-->
+{% endblock %}

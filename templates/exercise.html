@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Exercise
+{% endblock %}
+
+{% block main %}
+
+<div class="container marketing">
+  <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading fw-normal lh-1">{{ exercise[0]['name'] }}</h2>
+        <p class="lead exercise-block">{{ exercise[0]['instructions'] }}</p>
+        <p class="lead exercise-block">Body Part: {{ exercise[0]['bodyPart'] }}</p>
+        <p class="lead exercise-block">Muscle Target: {{ exercise[0]['muscle'] }}</p>
+        <p class="lead exercise-block">Secondary Muscles: {{ exercise[0]['secondaryMuscles'] }}</p>
+        <p class="lead exercise-block">Equipment: {{ exercise[0]['equipment'] }}</p>
+      </div>
+      <div class="col-md-5 exercise-container">
+        <img class="bd-placeholder-img rounded-circle" width="240" height="auto" src="../{{ exercise[0]['gifpath'] }}" role="gif" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+        <label class="add-fav">
+          <form id="favorite">
+            <input type="checkbox" {% if exercise[0]['id'] in favoritesId %} checked {% endif %}
+            id="exercise"
+            data-exercise-id="{{ exercise[0]['id'] }}"
+            placeholder="{{ exercise[0]['id'] }}"
+            onchange="doalert(this)"/>
+            <i class="icon-heart"><i {% if exercise[0]['id'] not in favoritesId %} class="icon-plus-sign" {% endif %}></i></i>
+          </form>
+        </label>
+      </div>
+    </div>
+  <hr class="featurette-divider">
+</div>
+
+{% endblock %}

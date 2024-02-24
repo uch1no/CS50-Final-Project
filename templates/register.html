@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<div class="container marketing">
+    <img class="d-block mx-auto mb-4" src="static/logo.png" alt="" width="150" height="auto">
+    <h1 class="display fw-normal text-body-emphasis">Register In</h1>
+    <br><br>
+    <form action="/register" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="lead" style="font-size: 90%;">
+            Password must contain at least:
+            <div style="list-style-type:none;">
+                <li>8 characters</li>
+                <li>One lowercase</li>
+                <li>One uppercase</li>
+                <li>One number</li>
+                <li>One special case character</li>
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="confirmation" name="confirmation" placeholder="Password (again)" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Subscription
+{% endblock %}
+
+{% block main %}
+
+
+<div class="container marketing">
+    <header>
+        <div class="pricing-header pb-md-4 mx-auto text-center" style="margin-top: 1rem; margin-bottom: 1rem;">
+            <img class="d-block mx-auto mb-4" src="static/logo.png" alt="" width="150" height="auto">
+            <h1 class="display fw-normal text-body-emphasis">Choose your subscription</h1>
+            <p class="fs-5 text-body-secondary">Choose your plan according to your usability.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div class="col">
+            <div class="card mb-4 shadow-sm" style="border-radius: 15px;">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Free</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>1 user included</li>
+                <li>4 free plans to build</li>
+                <li>Email support</li>
+                <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary" onclick="location.href='/register'">Sign up for free</button>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 shadow-sm" style="border-radius: 15px;">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">Family</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$12<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>5 users included</li>
+                <li>30 plans to build</li>
+                <li>Priority email support</li>
+                <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary" onclick="location.href='/checkout'">Get started</button>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 shadow-sm border-primary" style="border-radius: 15px;">
+            <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Enterprise</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>30 users included</li>
+                <li>Unlimited plans to build</li>
+                <li>Phone and email support</li>
+                <li>Help center access</li>
+                </ul>
+                <button type="button" class="w-100 btn btn-lg btn-primary" onclick="location.href='/contact'">Contact us</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+        <div class="table-responsive">
+        <table class="table text-center">
+            <thead>
+            <tr>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">Free</th>
+                <th style="width: 22%;">Family</th>
+                <th style="width: 22%;">Enterprise</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row" class="text-start">Public</th>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Private</th>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Permissions</th>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Sharing</th>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Unlimited members</th>
+                <td></td>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            </tr>
+            <tr>
+                <th scope="row" class="text-start">Extra security</th>
+                <td></td>
+                <td></td>
+                <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+            <symbol id="check" viewBox="0 0 16 16">
+                <title>Check</title>
+                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+            </symbol>
+        </svg>
+{% endblock %}

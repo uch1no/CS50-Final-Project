@@ -1,0 +1,229 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Exercise Yourself
+{% endblock %}
+
+{% block main %}
+<div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <section id="front-image">
+          <img src="static/front_01.jpg" aria-hidden="true" focusable="true">
+        </section>
+        <div class="container">
+          <div class="carousel-caption">
+            <p><a class="btn btn-lg btn-primary" href="/register">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <section id="front-image-2">
+          <img src="static/front_02.jpg" aria-hidden="true" focusable="true">
+        </section>
+        <div class="container">
+          <div class="carousel-caption">
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <section id="front-image-3">
+          <img src="static/front_03.jpg" aria-hidden="true" focusable="true">
+        </section>
+        <div class="container">
+          <div class="carousel-caption">
+            <p><a class="btn btn-lg btn-primary" href="/subscription">Browse plans</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <br>
+  <div class="container marketing">
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <h2 class="featurette-heading fw-normal lh-1">Search for over one thousand exercises with instructions</h2>
+      <p class="lead">We provide you a range of different exercises for all muscles group with detailed instructions.</p>
+
+      <!-- Four columns of text below the carousel -->
+      <div class="row g-0 row-cols-2 justify-content-center">
+        <div class="row row-cols-2">
+        <!-- #1.1 -->
+        <div class="col exercise-card">
+          <img class="bd-placeholder-img rounded-circle" width="240" height="240" src="static/gifs/{{ nums[0] }}.gif" role="gif" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+          <label class="add-fav"><form id="favorite"><input type="checkbox" onclick="location.href='/subscription'""/><i class="icon-heart"><i class="icon-plus-sign"></i></i></form></label>
+          <h2 class="fw-normal"></h2>
+          <p><a class="btn btn-secondary" href="exercise/{{ nums[0] }}">Details</a></p>
+        </div>
+
+        <!-- #1.2 -->
+        <div class="col exercise-card">
+          <img class="bd-placeholder-img rounded-circle" width="240" height="240" src="static/gifs/{{ nums[1] }}.gif" role="gif" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+          <label class="add-fav"><form id="favorite"><input type="checkbox" onclick="location.href='/subscription'""/><i class="icon-heart"><i class="icon-plus-sign"></i></i></form></label>
+          <h2 class="fw-normal"></h2>
+          <p><a class="btn btn-secondary" href="exercise/{{ nums[1] }}">Details</a></p>
+        </div>
+        </div>
+
+        <div class="row row-cols-2">
+        <!-- #2.1 -->
+        <div class="col exercise-card">
+          <img class="bd-placeholder-img rounded-circle" width="240" height="240" src="static/gifs/{{ nums[2] }}.gif" role="gif" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+          <label class="add-fav"><form id="favorite"><input type="checkbox" onclick="location.href='/subscription'""/><i class="icon-heart"><i class="icon-plus-sign"></i></i></form></label>
+          <h2 class="fw-normal"></h2>
+          <p><a class="btn btn-secondary" href="exercise/{{ nums[2] }}">Details</a></p>
+        </div>
+
+        <!-- #2.2 -->
+        <div class="col exercise-card">
+          <img class="bd-placeholder-img rounded-circle" width="240" height="240" src="static/gifs/{{ nums[3] }}.gif" role="gif" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-color)"/></svg>
+          <label class="add-fav"><form id="favorite"><input type="checkbox" onclick="location.href='/subscription'""/><i class="icon-heart"><i class="icon-plus-sign"></i></i></form></label>
+          <h2 class="fw-normal"></h2>
+          <p><a class="btn btn-secondary" href="exercise/{{ nums[3] }}">Details</a></p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Columns -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <br>
+      <h2 class="featurette-heading fw-normal lh-1">Search yourself!</h2>
+      <p class="lead">It's really easy.</p>
+        <!-- SEARCH BUTTON -->
+        <form class="form-inline" action="{{ url_for('results') }}">
+          <input style="width:300px;" id="exercises-list-input" list="exercises-list" class="form-control mr-sm-2 form-control-inline" autocomplete="on" placeholder="Search Exercises" name="search" type="search">
+          <datalist id="exercises-list">
+          </datalist>
+
+          <button class="btn btn-sm btn-outline-secondary" type="submit" action="/results">Search</button>
+        </form>
+        <!-- END OF SEARCH -->
+        <!-- TWO COLUMNS RESULTS -->
+        <div class="row g-0 row-cols-2 justify-content-center" id="show-results">
+        </div>
+    </div>
+
+
+    <hr class="featurette-divider">
+    <br>
+    <div class="row featurette">
+      <h2 class="featurette-heading fw-normal lh-1">The benefits of the database provided by ExerciseDB</h2>
+        <p class="lead">And the benefits of Exercise Yourself.</p>
+          <div class="row g-0 row-cols-4 justify-content-center">
+            <!-- #1 -->
+            <div color="#3772FF" class="col row-cols-1 display-1 dis-min">
+              <div color="#3772FF" class="display-1-color">
+                <h6 class="block-title">Animated GIFs</h6>
+              </div>
+              <div class="block">
+                <p class="block-body">Each animated exercise image demonstrates the form and technique as well as highlights the muscles worked.</p>
+              </div>
+            </div>
+              <!-- #2 -->
+            <div color="#EF466F" class="col row-cols-1 display-2 dis-min">
+              <div color="#EF466F" class="display-2-color">
+                <h6 class="block-title">Variety</h6>
+              </div>
+              <div class="block">
+                <p class="block-body">An incredible amount of exercises to build all types of workout programs from weight lifting, cardio, boxing, and much more.</p>
+              </div>
+            </div>
+            <!-- #3 -->
+            <div color="#FF592C" class="col row-cols-1 display-3 dis-min">
+              <div color="#FF592C" class="display-3-color">
+                <h6 class="block-title">Equipment Types</h6>
+              </div>
+              <div class="block">
+                <p class="block-body">Allow your users to build workout plans around the equipment they have available. There's no shortage of options.</p>
+              </div>
+            </div>
+            <!-- #4 -->
+            <div color="#ad4fe0" class="col row-cols-1 display-4 dis-min">
+              <div color="#ad4fe0" class="display-4-color">
+                <h6 class="block-title">Workout Plans</h6>
+              </div>
+              <div class="block">
+                <p class="block-body">Easy querying of the data for creating workout sheets/plans.</p>
+              </div>
+            </div>
+          </div>
+
+    <!-- /END THE FEATURETTES -->
+
+
+    <!-- SCRIPT FOR INDEX AUTOCOMPLETE SEARCH -->
+    <script  type='text/javascript' src="{{ url_for('static', filename='js/exercisesComplete.js') }}"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        let input = document.querySelector('#exercises-list-input');
+        let count = 0;
+        input.addEventListener('keyup', function(event) {
+          let html = '';
+          let show = '';
+          let results = [];
+          if (input.value.length >= 3) {
+            for (exercise of EXERCISES) {
+              if (exercise.name.toLowerCase().includes(input.value.toLowerCase())) {
+                html += `<a href='/search?search=${exercise.name}'><option>${exercise.name}</option></a>`;
+              }
+              // UPDATING SHOW-RESULTS
+              if (exercise.name.toLowerCase().includes(input.value.toLowerCase())) {
+                results.push(`
+                <div class="row featurette exercise-mini-container dis-min">
+                  <div class="col" style="margin-left:6%; margin-right:6%; margin-top:3%">
+                    <h2 class="featurette-heading fw-normal lh-1">${exercise.name}</h2>
+                    <div class="row row-cols-2">
+                      <p class="lead exercise-block" style="margin-bottom: 0;">Body Part</p>
+                      <p class="lead exercise-block" style="margin-bottom: 0;">Muscle Target</p>
+                      <p class="lead exercise-block">${exercise.bodyPart}</p>
+                      <p class="lead exercise-block">${exercise.muscle}</p>
+                    </div>
+                    <div class="row row-cols-2">
+                      <p class="lead exercise-block" style="margin-bottom: 0;">Secondary Muscles</p>
+                      <p class="lead exercise-block" style="margin-bottom: 0;">Equipment</p>
+                      <p class="lead exercise-block">${exercise.secondaryMuscles}</p>
+                      <p class="lead exercise-block">${exercise.equipment}</p>
+                    </div>
+                  </div>
+                  <div class="col dis-min">
+                    <img class="bd-placeholder-img rounded-circle" width="240" height="240"
+                    src="${exercise.gifpath}" role="gif" aria-label="Placeholder" preserveAspectRatio="xMidYMid slice"
+                    focusable="false">
+                  </div>
+                </div>`);
+              }
+              show = results.slice(0,8).join("");
+              show += `<div class="center"><p><a class="btn btn-secondary" href="/subscription">More!</a></p></div>`;
+            }
+          }
+          document.getElementById('exercises-list').innerHTML = html;
+          document.getElementById('show-results').innerHTML = show;
+        });
+      });
+    </script>
+    <!-- END OF SCRIPT -->
+{% endblock %}
