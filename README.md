@@ -26,7 +26,9 @@ pip install flask-login
 ```
 
 ### Development
-This website was developed with Flask. HTML, CSS, and JavaScript were the building blocks of your website. SQLite3 used as database to store the exercises downloaded using RapidAPI and user data (login and exercises favorited).
+This website was developed with Flask. HTML, CSS, and JavaScript were the building blocks. SQLite3 was used to provide database connection to store the exercises downloaded using RapidAPI and other user data (login and exercises favorited).
+
+Data was provided by <a href="https://www.exercisedb.io/" target="_blank">Exercisedb.
 
 ![Front Page #04](https://github.com/uch1no/CS50-Final-Project/blob/main/static/readme_04.png?raw=true "Language Tech Stack")
 
@@ -40,7 +42,8 @@ Favorite your exercises to remember then.
 
 ![Front Page #03](https://github.com/uch1no/CS50-Final-Project/blob/main/static/readme_03.png?raw=true "Front Page #03")
 
-Data provided by <a href="https://www.exercisedb.io/" target="_blank">Exercisedb
+
+
 
 
 # This was CS50.
