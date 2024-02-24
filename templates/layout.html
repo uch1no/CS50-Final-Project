@@ -47,6 +47,8 @@
                                     <datalist id="exercises-list-layout">
                                     </datalist>
                                 </li>
+                                <select name="searchBodypart" id="searchBodypart" class="form-control form-control-inline" hidden="hidden"></select>
+                                <select name="searchEquipment" id="searchEquipment" class="form-control form-control-inline" hidden="hidden"></select>
                                 <li class="nav-item">
                                     <button class="btn btn-sm btn-outline-secondary" type="submit" action="/search" style="height:100%;">Search</button>
                                 </li>
@@ -54,6 +56,7 @@
                         </form>
                         <!-- END OF SEARCH -->
                         <ul class="navbar-nav me-auto mt-2">
+                            <li class="nav-item"><a class="nav-link" href="/search">Advanced Search</a></li>
                             <li class="nav-item"><a class="nav-link" href="/favorites">Favorites</a></li>
                         </ul>
                         <ul class="navbar-nav ms-auto mt-2">
