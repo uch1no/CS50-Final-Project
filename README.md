@@ -22,11 +22,7 @@ python3 -m flask run
 
 #### Some modules need to be downloaded:
 ```
-pip install flask-login
-pip install cs50
-pip install Flask
-pip install Flask-Session
-pip install requests
+pip install -r requeriments.txt
 ```
 
 ### Development
